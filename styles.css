@@ -1,0 +1,150 @@
+@font-face {
+  font-family: YoungSerif-Regular;
+  src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+@font-face {
+  font-family: Outfit;
+  src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+:root {
+  --Nutmeg: hsl(14, 45%, 36%);
+  --Dark-Raspberry: hsl(332, 51%, 32%);
+  --White: hsl(0, 0%, 100%);
+  --Rose-White: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --Light-Grey: hsl(30, 18%, 87%);
+  --Wenge-Brown: hsl(30, 10%, 34%);
+  --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+
+body {
+  background-color: var(--Eggshell);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Outfit";
+  font-size: 16px;
+}
+
+h1,
+h2 {
+  font-family: "YoungSerif-Regular";
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--Dark-Charcoal);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--Nutmeg);
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--Dark-Raspberry);
+}
+
+p,
+li,
+span,
+tr {
+  color: var(--Wenge-Brown);
+}
+
+hr {
+  border: none; /* Remove default border */
+  border-top: 0.5px solid var(--Light-Grey);
+}
+
+span {
+  font-weight: bold;
+}
+
+.container {
+  background-color: var(--White);
+  width: 40vw;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.container img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.container ul {
+  list-style-type: square;
+  margin-bottom: 30px;
+}
+
+.container ol {
+  margin-bottom: 30px;
+}
+
+.container li {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.container li::marker {
+  color: var(--Nutmeg);
+  font-weight: bold;
+}
+
+.container-prep-time {
+  background-color: var(--Rose-White);
+  padding: 1px 30px;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: 1px solid var(--Light-Grey);
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+th {
+  font-weight: normal;
+  text-align: left;
+  padding: 10px;
+}
+
+td {
+  color: var(--Nutmeg);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  .container {
+    width: 100vw;
+    box-sizing: border-box;
+    border-radius: 0;
+  }
+
+  .container img {
+    width: calc(100% + 80px);
+    margin: 0 -40px;
+    margin-top: -30px;
+    border-radius: 0;
+    display: block;
+  }
+}
